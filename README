@@ -1,0 +1,19 @@
+checkIfVertexExists:
+    - verific sa fie minim un nod pe fiecare pozitie
+    - fac combinatii intre toate valorile pana la k si toate nodurile posibile si le salvez in clauze
+    - literalii mei vor fi de forma xi,j unde i este pozitia in clica si j este nodul
+    - clauzele mele sunt de forma (x1,2 V x1,3 ...) &
+
+checkIfVertexIsUnique:
+    - verific sa fie *doar* un nod pe fiecare pozitie
+    - parcurg toate nodurile si ma uit sa vad sa nu fie in doua pozitii diferite
+
+checkIfAllEdgesExist:
+    - caut nodurile intre care nu exista muchie si verific ca macar una din ele sa nu fie in clica
+    - iau diagonala superioara a matricei de adiacenta si caut 0-uri
+    - verific sa vad daca sunt in clica
+
+main:
+    - citesc din fisier si imi formez matricea de adiacenta
+    - mi-am format in functiile anterioare stringuri cum ar arata SAT-ul
+    - imi scot clauzele intr-un vector si apoi literalii si formez output-ul prin formula (index1 * nr_noduri + index2)
